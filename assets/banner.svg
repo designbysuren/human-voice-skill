@@ -1,0 +1,45 @@
+<svg width="1200" height="340" viewBox="0 0 1200 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="340" fill="#0d1117"/>
+
+  <!-- Subtle grid lines -->
+  <line x1="0" y1="170" x2="1200" y2="170" stroke="#161b22" stroke-width="1"/>
+  <line x1="600" y1="0" x2="600" y2="340" stroke="#161b22" stroke-width="1"/>
+
+  <!-- Left accent bar -->
+  <rect x="60" y="80" width="4" height="180" fill="#f78166" rx="2"/>
+
+  <!-- Main headline -->
+  <text x="88" y="142" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', monospace" font-size="48" font-weight="700" fill="#e6edf3">human-voice-skill</text>
+
+  <!-- Subheadline line 1 -->
+  <text x="88" y="196" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="22" font-weight="400" fill="#8b949e">A Claude Code skill that makes AI write like a human</text>
+
+  <!-- Subheadline line 2 -->
+  <text x="88" y="228" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="22" font-weight="400" fill="#8b949e">who actually lived through the thing.</text>
+
+  <!-- Tag line -->
+  <text x="88" y="284" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', monospace" font-size="15" font-weight="400" fill="#f78166">Not "passes AI detection." Actually credible.</text>
+
+  <!-- Right side: rule preview -->
+  <rect x="760" y="80" width="1" height="180" stroke="#30363d" stroke-width="1" fill="#30363d"/>
+
+  <text x="790" y="118" font-family="monospace" font-size="13" fill="#3fb950">// seven rules</text>
+
+  <text x="790" y="148" font-family="monospace" font-size="13" fill="#79c0ff">1.</text>
+  <text x="814" y="148" font-family="monospace" font-size="13" fill="#8b949e">Write from the scar, not the lesson</text>
+
+  <text x="790" y="172" font-family="monospace" font-size="13" fill="#79c0ff">2.</text>
+  <text x="814" y="172" font-family="monospace" font-size="13" fill="#8b949e">Use the "at best" move</text>
+
+  <text x="790" y="196" font-family="monospace" font-size="13" fill="#79c0ff">3.</text>
+  <text x="814" y="196" font-family="monospace" font-size="13" fill="#8b949e">Let one thought be incomplete</text>
+
+  <text x="790" y="220" font-family="monospace" font-size="13" fill="#79c0ff">4.</text>
+  <text x="814" y="220" font-family="monospace" font-size="13" fill="#8b949e">Use specific numbers</text>
+
+  <text x="790" y="244" font-family="monospace" font-size="13" fill="#79c0ff">5.</text>
+  <text x="814" y="244" font-family="monospace" font-size="13" fill="#8b949e">Vary sentence length on purpose</text>
+
+  <text x="790" y="268" font-family="monospace" font-size="13" fill="#8b949e" opacity="0.5">+ 2 more in SKILL.md</text>
+</svg>

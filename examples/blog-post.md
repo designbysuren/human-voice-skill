@@ -1,42 +1,42 @@
-# Example: Blog Post
+# Example: Technical Blog Post
 
-This is a worked example showing the Human Voice Skill applied to a developer blog post.
+## Prompt Given to Claude
 
----
-
-## The Prompt
-
-> Write a blog post about shipping a side project after years of not finishing things.
-
----
-
-## Without the Skill (Generic Output)
-
-Shipping a side project is one of the most rewarding experiences a developer can have. After years of leaving things unfinished, I finally learned the importance of consistency and follow-through. The key insight I gained was that perfectionism is the enemy of progress...
-
-*What went wrong: Opens with a concept. No specific detail. Sounds like every other post. The "key insight" framing announces the lesson before earning it.*
+```
+Write a short blog post about the time we removed a feature that users did not actually want.
+Use the human-voice skill.
+```
 
 ---
 
-## With the Skill Applied
+## Output (Human Voice Applied)
 
-I have 23 unfinished repos. Not 20. 23, because I counted last month when I was trying to figure out why I could not ship the one I actually cared about.
+### We Built the Wrong Thing for a Year
 
-The pattern was always the same. I'd get 80% done, hit the part that required showing someone, and find something else to start. New idea. Cleaner architecture. Better name.
+The feature had a progress bar.
 
-I told myself it was a standards thing. At best, it was avoidance with better vocabulary.
+We spent two weeks getting the animation right. The fill speed, the color, the little checkmark at the end. It looked good. We were proud of it.
 
-The one I shipped — a design feedback tool that 340 people now use — I finished in a weekend. Not because it was easier. Because I stopped at 60% and made someone look at it before I could change my mind.
+We showed it to three users before launch. None of them wanted to track progress the way we built it. One of them asked if she could turn it off. We thought she was the outlier.
 
-The 60% version was embarrassing. That was the point.
+She was not.
+
+Four months after launch, we pulled the feature. Engagement was flat. Support tickets mentioned it twice, both times to ask how to hide it. We had built something technically solid that solved a problem nobody had.
+
+That was not the model's fault. That was not the timeline's fault. I had made assumptions about what "tracking progress" meant and I had never tested them. The progress bar was an answer to a question I had written myself.
+
+We removed it in a single PR. Took about forty minutes.
+
+I still think the animation was good.
 
 ---
 
-## What the Skill Did
+## Why This Works
 
-- **Opened with a specific number** (23, not "many") — signals this is real, not illustrated
-- **Named the pattern without naming it** — "avoidance with better vocabulary" instead of "I was afraid"
-- **Buried the admission** — the self-awareness arrives mid-paragraph, not as a conclusion
-- **Specific outcome** (340 users) — earns the authority to give advice
-- **Short final line** — lands harder because the paragraph before it was longer
-- **No wisdom summary** — the story already said what it needed to say
+- **Opens with a specific detail** (the progress bar animation), not a lesson
+- "Three users" not "several users" - Rule 4 (specific numbers)
+- "She was not" - short sentence after a longer one, varied rhythm - Rule 5
+- "I had made assumptions... I had written myself" - specific self-blame, not "we failed to validate" - Rule 6
+- "I still think the animation was good" - incomplete thought, no clean resolution - Rule 3
+- No sentence summarizes the paragraph before it
+- No "in conclusion" or "the lesson here is"

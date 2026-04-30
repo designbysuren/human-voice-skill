@@ -1,4 +1,15 @@
-# human-voice-skill
+<p align="center">
+  <img src="assets/banner.svg" alt="human-voice-skill" width="100%"/>
+</p>
+
+<p align="center">
+  <a href="https://github.com/designbysuren/human-voice-skill/stargazers"><img src="https://img.shields.io/github/stars/designbysuren/human-voice-skill?style=flat&color=f78166&labelColor=0d1117" alt="Stars"/></a>
+  <a href="https://github.com/designbysuren/human-voice-skill/network/members"><img src="https://img.shields.io/github/forks/designbysuren/human-voice-skill?style=flat&color=79c0ff&labelColor=0d1117" alt="Forks"/></a>
+  <img src="https://img.shields.io/badge/works_with-Claude_Code-8b949e?style=flat&labelColor=0d1117" alt="Claude Code"/>
+  <img src="https://img.shields.io/badge/license-MIT-3fb950?style=flat&labelColor=0d1117" alt="MIT"/>
+</p>
+
+---
 
 A Claude Code skill that makes AI write like a human who actually lived through the thing.
 
@@ -33,10 +44,9 @@ This skill encodes those patterns and suppresses the AI defaults that kill credi
 
 ## Install
 
-**In Claude Code:**
+**Claude Code (recommended):**
 
 ```bash
-# Clone into your .claude/skills directory
 git clone https://github.com/designbysuren/human-voice-skill ~/.claude/skills/human-voice-skill
 ```
 
@@ -50,13 +60,14 @@ Copy `SKILL.md` into any `.claude/skills/` directory in your project. Claude Cod
 
 ## Usage
 
-Once installed, reference the skill when asking Claude to write:
+Once installed, reference the skill in any writing prompt:
 
 ```
-Write a blog post about why we deprecated our feature flags system. Use the human-voice skill.
+Write a blog post about why we deprecated our feature flags system.
+Use the human-voice skill.
 ```
 
-Or for voice matching:
+For voice matching:
 
 ```
 Here are three examples of how I write: [paste samples]
@@ -72,33 +83,37 @@ The skill will:
 
 ---
 
-## The Seven Rules (Short Version)
+## The Seven Rules
 
-1. **Write from the scar, not the lesson** - Start with the moment you were still wrong
-2. **Use the "at best" move** - Hedge in ways that show you thought harder about the claim
-3. **Let one thought be incomplete** - Not every tension needs resolution
-4. **Use specific numbers** - Three users, not "several users"
-5. **Vary sentence length on purpose** - Break the AI rhythm
-6. **Self-blame once, specifically** - Not "we failed to validate" but "I built it for myself"
-7. **Let analogies arrive late** - No "to illustrate this concept"
+| # | Rule | What it fixes |
+|---|------|--------------|
+| 1 | **Write from the scar, not the lesson** | AI starts with what was learned. Humans start with the moment they were still wrong. |
+| 2 | **Use the "at best" move** | AI states things cleanly. Humans hedge in ways that show they thought harder. |
+| 3 | **Let one thought be incomplete** | AI resolves every tension. Humans drop a thread sometimes. |
+| 4 | **Use specific numbers** | AI says "several." Humans say "three." |
+| 5 | **Vary sentence length on purpose** | AI writes in even rhythm. Humans don't. |
+| 6 | **Self-blame once, specifically** | AI says "we failed to validate." Humans say "I built it for myself." |
+| 7 | **Let analogies arrive late** | AI announces analogies. Humans find them mid-thought. |
 
-Full rules with examples are in `SKILL.md`.
+Full rules with examples and the suppression list are in [`SKILL.md`](SKILL.md).
 
 ---
 
-## Example
+## Quick Example
 
-**Before (AI voice):**
+**Before:**
 
-"When working with AI tools, it is important to consider the quality of your prompts. Research has shown that clear and specific instructions lead to better outputs. By investing time in crafting thoughtful prompts, teams can significantly improve their results."
+> "When working with AI tools, it is important to consider the quality of your prompts. Research has shown that clear and specific instructions lead to better outputs."
 
-**After (human voice):**
+**After:**
 
-"I spent six weeks blaming the model. The outputs were vague, circular, not useful. Then a colleague looked over my shoulder for ten minutes and asked one question: what do you actually want it to do?
+> "I spent six weeks blaming the model. The outputs were vague, circular, not useful. Then a colleague looked over my shoulder for ten minutes and asked one question: what do you actually want it to do?
+>
+> I did not have an answer. That was the problem.
+>
+> At best, a prompt is the packaging of thinking. I had not done the thinking."
 
-I did not have an answer. That was the problem.
-
-At best, a prompt is the packaging of thinking. I had not done the thinking."
+More worked examples in [`examples/`](examples/).
 
 ---
 
@@ -113,7 +128,7 @@ At best, a prompt is the packaging of thinking. I had not done the thinking."
 
 ## Compatibility
 
-Works with Claude Code, Cursor, Windsurf, Opencode, and any agent that supports `.claude/skills/` directories with `SKILL.md` files.
+Works with Claude Code, Cursor, Windsurf, Opencode, and any agent that reads `.claude/skills/` directories.
 
 ---
 
@@ -121,13 +136,15 @@ Works with Claude Code, Cursor, Windsurf, Opencode, and any agent that supports 
 
 ```
 human-voice-skill/
-  README.md                    <- you are here
-  SKILL.md                     <- the skill Claude reads and uses
+  README.md                          <- you are here
+  SKILL.md                           <- the skill Claude reads and applies
   examples/
-    blog-post.md               <- before/after with annotations
-    linkedin-post.md           <- second format, shows range
+    blog-post.md                     <- technical post, before/after with annotations
+    linkedin-post.md                 <- short-form post, before/after with annotations
   philosophy/
-    voice-calibration.md       <- how to match a specific person's voice
+    voice-calibration.md             <- how to match a specific person's voice
+  assets/
+    banner.svg                       <- repo banner
 ```
 
 ---
@@ -136,7 +153,7 @@ human-voice-skill/
 
 The rules are intentionally opinionated. If you have a pattern that consistently makes AI writing feel more human and is not already covered, open an issue with a before/after example.
 
-Pull requests that add examples for specific writing formats (changelogs, post-mortems, release notes, cold emails) are welcome.
+Pull requests adding examples for specific formats (changelogs, post-mortems, release notes, cold emails) are welcome.
 
 ---
 

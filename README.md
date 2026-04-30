@@ -6,6 +6,8 @@
   <a href="https://github.com/designbysuren/human-voice-skill/stargazers"><img src="https://img.shields.io/github/stars/designbysuren/human-voice-skill?style=flat&color=f78166&labelColor=0d1117" alt="Stars"/></a>
   <a href="https://github.com/designbysuren/human-voice-skill/network/members"><img src="https://img.shields.io/github/forks/designbysuren/human-voice-skill?style=flat&color=79c0ff&labelColor=0d1117" alt="Forks"/></a>
   <img src="https://img.shields.io/badge/works_with-Claude_Code-8b949e?style=flat&labelColor=0d1117" alt="Claude Code"/>
+  <img src="https://img.shields.io/badge/works_with-Codex_CLI-8b949e?style=flat&labelColor=0d1117" alt="Codex CLI"/>
+  <img src="https://img.shields.io/badge/works_with-Cursor-8b949e?style=flat&labelColor=0d1117" alt="Cursor"/>
   <img src="https://img.shields.io/badge/license-MIT-3fb950?style=flat&labelColor=0d1117" alt="MIT"/>
 </p>
 
@@ -117,18 +119,99 @@ More worked examples in [`examples/`](examples/).
 
 ---
 
+## Using with Other Agents
+
+Claude Code is the only agent with native `.claude/skills/` auto-discovery. For every other agent, paste or reference `SKILL.md` using the method below.
+
+---
+
+### Codex CLI
+
+Codex CLI reads from `AGENTS.md` in your repo root. Add this to your `AGENTS.md`:
+
+```markdown
+## Writing Style
+
+When writing any prose, blog posts, LinkedIn posts, READMEs, changelogs, or essays,
+apply the rules in SKILL.md (human-voice skill). Do not use AI writing defaults.
+Reference the seven rules and the suppression list before generating output.
+```
+
+Or copy the full `SKILL.md` contents directly into `AGENTS.md` for offline use.
+
+---
+
+### Cursor
+
+Cursor reads from `.cursorrules` in your repo root. Add this:
+
+```
+When the user asks for any writing (blog posts, LinkedIn posts, READMEs,
+changelogs, documentation with personal tone), apply the human-voice skill.
+The rules are in SKILL.md. Follow all seven rules and the suppression list.
+Do not use AI writing defaults. Run the signature lines test before finishing.
+```
+
+---
+
+### Windsurf
+
+Windsurf reads from `.windsurfrules`. Same pattern as Cursor:
+
+```
+For any writing tasks, apply the human-voice skill rules from SKILL.md.
+Seven rules. Suppression list. Signature lines test. No AI writing defaults.
+```
+
+---
+
+### Opencode
+
+Opencode supports `AGENTS.md` (same as Codex CLI). Use the same snippet from the Codex section above.
+
+---
+
+### ChatGPT / API / Custom GPTs
+
+No config file. Two options:
+
+**Option 1: Paste into system prompt**
+
+Copy the full contents of `SKILL.md` into the system prompt of your GPT or API call.
+
+**Option 2: Reference at prompt time**
+
+```
+[Paste SKILL.md contents here]
+
+---
+
+Now write a blog post about [topic].
+```
+
+For a Custom GPT, paste `SKILL.md` into the "Instructions" field. The skill will apply to every conversation in that GPT.
+
+---
+
+### Quick Reference
+
+| Agent | Config file | Method |
+|-------|------------|--------|
+| Claude Code | `.claude/skills/` | Auto-discovery |
+| Codex CLI | `AGENTS.md` | Paste reference or full content |
+| Cursor | `.cursorrules` | Paste reference |
+| Windsurf | `.windsurfrules` | Paste reference |
+| Opencode | `AGENTS.md` | Paste reference or full content |
+| ChatGPT / API | System prompt | Paste full content |
+
+---
+
 ## Who This Is For
 
 - Developers writing technical blog posts or essays
 - Founders writing LinkedIn content or launch posts
 - Technical writers who want READMEs that feel authored
 - Anyone who has been told "this sounds AI-generated" and did not know how to fix it
-
----
-
-## Compatibility
-
-Works with Claude Code, Cursor, Windsurf, Opencode, and any agent that reads `.claude/skills/` directories.
 
 ---
 

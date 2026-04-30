@@ -1,42 +1,119 @@
 # human-voice-skill
 
-A Claude skill that makes AI write like a human who actually lived through the thing.
+A Claude Code skill that makes AI write like a human who actually lived through the thing.
+
+Not "passes AI detection." Actually credible.
 
 ---
 
 ## The Problem
 
-You can feel it when AI wrote something.
+AI writing has a signature. Developers and readers recognize it in seconds.
 
-Not because of the words. Because of what's missing. The specific number that's slightly too round. The sentence that resolves a little too cleanly. The admission that arrives exactly where you'd expect it to.
+- Every paragraph is the same length
+- Every claim is explained right after it is made
+- Nothing is ever admitted as a mistake
+- Every analogy is introduced as "to illustrate this concept"
 
-AI writes like someone explaining a thing. Humans write like someone who survived it.
+You can feel it. It does not matter if the facts are right. The writing feels generated, which means it feels unearned.
 
-This skill is the difference.
-
----
-
-## What It Does
-
-This skill teaches Claude to write with:
-
-- **Specific numbers** over estimated ones (23 unfinished repos, not "many")
-- **Buried admissions** that arrive without announcement
-- **Rhythm variance** — short sentences after long ones, not uniform cadence
-- **Earned abstractions** — the concept comes after the specific moment that created it
-- **No throat-clearing** — the first sentence is almost always deleted
-
-It works for blog posts, LinkedIn posts, READMEs, documentation, changelogs, and release notes. Anywhere developers write and sound like they didn't.
+This skill fixes that.
 
 ---
 
-## Quick Start
+## What This Skill Does
 
-1. Copy the contents of `SKILL.md` into your Claude project instructions (or `.claude/` directory)
-2. Give Claude a writing prompt
-3. Compare the output to the examples in `examples/`
+It teaches Claude seven rules for writing that sounds like a person thought it, doubted it, and then typed it anyway.
 
-To calibrate for your specific voice, follow the guide in `philosophy/voice-calibration.md`.
+The rules are based on a simple observation: what makes writing feel human is not complexity or cleverness. It is texture. Second thoughts. The specific number instead of the vague one. The sentence that does not resolve. The analogy that arrives mid-thought without announcement.
+
+This skill encodes those patterns and suppresses the AI defaults that kill credibility.
+
+---
+
+## Install
+
+**In Claude Code:**
+
+```bash
+# Clone into your .claude/skills directory
+git clone https://github.com/designbysuren/human-voice-skill ~/.claude/skills/human-voice-skill
+```
+
+Claude will automatically detect and use the skill when relevant.
+
+**Manual:**
+
+Copy `SKILL.md` into any `.claude/skills/` directory in your project. Claude Code discovers skills automatically.
+
+---
+
+## Usage
+
+Once installed, reference the skill when asking Claude to write:
+
+```
+Write a blog post about why we deprecated our feature flags system. Use the human-voice skill.
+```
+
+Or for voice matching:
+
+```
+Here are three examples of how I write: [paste samples]
+Using the human-voice skill, write a LinkedIn post about our launch.
+```
+
+The skill will:
+
+- Extract your rhythm, hedging style, and admission pattern from the samples
+- Apply the seven rules
+- Suppress the AI writing defaults
+- Check the output against the signature lines test before finishing
+
+---
+
+## The Seven Rules (Short Version)
+
+1. **Write from the scar, not the lesson** - Start with the moment you were still wrong
+2. **Use the "at best" move** - Hedge in ways that show you thought harder about the claim
+3. **Let one thought be incomplete** - Not every tension needs resolution
+4. **Use specific numbers** - Three users, not "several users"
+5. **Vary sentence length on purpose** - Break the AI rhythm
+6. **Self-blame once, specifically** - Not "we failed to validate" but "I built it for myself"
+7. **Let analogies arrive late** - No "to illustrate this concept"
+
+Full rules with examples are in `SKILL.md`.
+
+---
+
+## Example
+
+**Before (AI voice):**
+
+"When working with AI tools, it is important to consider the quality of your prompts. Research has shown that clear and specific instructions lead to better outputs. By investing time in crafting thoughtful prompts, teams can significantly improve their results."
+
+**After (human voice):**
+
+"I spent six weeks blaming the model. The outputs were vague, circular, not useful. Then a colleague looked over my shoulder for ten minutes and asked one question: what do you actually want it to do?
+
+I did not have an answer. That was the problem.
+
+At best, a prompt is the packaging of thinking. I had not done the thinking."
+
+---
+
+## Who This Is For
+
+- Developers writing technical blog posts or essays
+- Founders writing LinkedIn content or launch posts
+- Technical writers who want READMEs that feel authored
+- Anyone who has been told "this sounds AI-generated" and did not know how to fix it
+
+---
+
+## Compatibility
+
+Works with Claude Code, Cursor, Windsurf, Opencode, and any agent that supports `.claude/skills/` directories with `SKILL.md` files.
 
 ---
 
@@ -55,32 +132,14 @@ human-voice-skill/
 
 ---
 
-## Why This Exists
-
-The skill ecosystem has design skills, coding skills, and productivity skills. Nothing for the thing developers do every day: write.
-
-Not just technical writing. The blog post about the thing you shipped. The LinkedIn post about the thing you learned. The README that makes someone trust the project before they've run a single command.
-
-Those all require a voice. This skill gives you one.
-
----
-
-## The Source Material
-
-This skill was built from a single article — one that readers described as "the most human thing I've read from an AI session." The writing patterns in SKILL.md were pulled directly from that piece: the specific numbers, the buried self-awareness, the short sentence that lands after a long one.
-
-The skill is the analysis of what made that piece work.
-
----
-
 ## Contributing
 
-Fork it. Adapt the voice calibration guide for your own voice. Open a PR if you find patterns that work that aren't in here yet.
+The rules are intentionally opinionated. If you have a pattern that consistently makes AI writing feel more human and is not already covered, open an issue with a before/after example.
 
-The skill should get more specific over time, not stay generic.
+Pull requests that add examples for specific writing formats (changelogs, post-mortems, release notes, cold emails) are welcome.
 
 ---
 
 ## License
 
-MIT. Use it, fork it, build on it.
+MIT

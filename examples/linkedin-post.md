@@ -1,47 +1,36 @@
 # Example: LinkedIn Post
 
-This example shows how the Human Voice Skill handles short-form professional writing. LinkedIn is the hardest format to make feel human. The default is inspiration-bait. This is the antidote.
+## Prompt Given to Claude
+
+```
+Write a LinkedIn post about shipping something that flopped. Use the human-voice skill. Keep it short.
+```
 
 ---
 
-## The Prompt
+## Output (Human Voice Applied)
 
-> Write a LinkedIn post about learning that your design process was slowing down your team.
+We launched a feature six weeks ago that I was certain would work.
 
----
+We had the data. We had the user interviews. We had a really clean demo that everyone on the team liked.
 
-## Without the Skill (Generic Output)
+It got a 2% adoption rate in the first month.
 
-Humility is a superpower in design.
+I went back and listened to the user interviews again. They had not said they wanted the feature. They had said they wanted the outcome the feature was supposed to produce. I had heard what I needed to hear.
 
-I recently realized that my detailed design process, while thorough, was actually creating bottlenecks for my team. Sometimes we hold onto our processes too tightly.
+That is a different mistake than moving too fast or not testing enough. It is the mistake of listening with the answer already decided.
 
-The lesson: collaboration > perfection.
+We are rebuilding it. Differently this time. I am trying to stay in the question a little longer before I reach for the solution.
 
-❤️ Save this if you needed to hear it.
-
-*What went wrong: Opens with an aphorism. The admission is vague. "I recently realized" is doing all the work. No specifics. The call to action is pure engagement-farming.*
+I do not know yet if that will be enough.
 
 ---
 
-## With the Skill Applied
+## Why This Works
 
-We missed a sprint deadline because I was still in Figma.
-
-Not because the work was hard. Because I had a system: wireframes, then flows, then hi-fi, then handoff. Twelve steps. I built it over three years and I was proud of it.
-
-The engineers had been waiting for four days. I thought they needed the hi-fi. They needed the flows from step four.
-
-I cut the process to six steps. Delivery time dropped 40%. I kept waiting for quality to drop. It didn’t.
-
-The system was for me, not for the product.
-
----
-
-## What the Skill Did
-
-- **Opens with the consequence, not the lesson** — "We missed a sprint deadline" before any context
-- **Specific detail that earns the claim** — twelve steps, three years, four days, 40%
-- **The buried admission** — "The system was for me" in the final line, not telegraphed
-- **No hashtags, no save-this CTA** — the post trusts the story to do the work
-- **Short sentences after a long setup** — "It didn't" lands because the previous sentence was longer
+- **Specific claim up front** ("I was certain") that immediately creates tension
+- "2% adoption rate" not "low adoption" - Rule 4 (specific numbers)
+- "I had heard what I needed to hear" - specific self-blame - Rule 6
+- "I do not know yet if that will be enough" - incomplete, unresolved - Rule 3
+- No hashtags, no "what did I learn," no symmetrical ending
+- Could be quoted standalone: "listening with the answer already decided"
